@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Олена Максим'як — Психологиня</title>
+<meta name="description" content="Олена Максим'як — психологиня, кандидатка у психотерапевти в методі Позитивна Психотерапія, супервізорка. Понад 9 років практики. Індивідуальні, сімейні консультації та супервізії.">
+
+<meta property="og:title" content="Олена Максим'як — Психологиня">
+<meta property="og:description" content="Понад 9 років практики. Позитивна психотерапія, супервізія. Запис на консультацію.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f3efe9;
+  --bg-warm:#ece5db;
+  --ink:#2e2a26;
+  --ink-soft:#5a534b;
+  --clay:#a8674b;
+  --clay-deep:#8a5139;
+  --sage:#7d8471;
+  --line:#d8cfc2;
+  --card:#faf7f2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
+
+/* ---- hero ---- */
+.hero{
+  position:relative;
+  padding:84px 0 64px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-180px;right:-160px;
+  width:480px;height:480px;
+  background:radial-gradient(circle,var(--bg-warm) 0%,transparent 68%);
+  z-index:0;
+}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{
+  font-size:.74rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--clay);
+  font-weight:500;
+  margin-bottom:24px;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(2.9rem,8vw,4.8rem);
+  line-height:1.02;
+  letter-spacing:-.01em;
+  color:var(--ink);
+}
+h1 .role{
+  display:block;
+  font-style:italic;
+  font-size:.52em;
+  color:var(--sage);
+  margin-top:.25em;
+  font-weight:400;
+}
+.lead{
+  margin-top:30px;
+  max-width:540px;
+  font-size:1.12rem;
+  color:var(--ink-soft);
+}
+.years{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.5em;
+  margin-top:36px;
+  padding:14px 22px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:2px;
+}
+.years b{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  font-weight:600;
+  color:var(--clay-deep);
+  line-height:1;
+}
+.years span{font-size:.92rem;color:var(--ink-soft)}
+
+/* ---- section frame ---- */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.s-label{
+  font-size:.74rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--sage);
+  font-weight:500;
+  margin-bottom:30px;
+}
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(1.8rem,4.5vw,2.6rem);
+  line-height:1.1;
+  margin-bottom:8px;
+}
+
+/* ---- approach / credentials ---- */
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.cred{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding:26px 24px;
+}
+.cred h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--clay-deep);
+  margin-bottom:8px;
+  font-weight:500;
+}
+.cred p{font-size:.98rem;color:var(--ink-soft)}
+
+.memberships{margin-top:34px}
+.memberships .s-sub{
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:18px;font-weight:500;
+}
+.mlist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.mlist li{
+  font-size:.98rem;color:var(--ink);
+  padding-left:22px;position:relative;
+}
+.mlist li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:8px;height:8px;border:1px solid var(--clay);border-radius:50%;
+}
+
+/* ---- services / prices ---- */
+.svc{
+  display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+  padding:24px 0;border-bottom:1px solid var(--line);
+}
+.svc:last-child{border-bottom:none}
+.svc-name{flex:1}
+.svc-name h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.55rem;font-weight:500;
+}
+.svc-name .dur{font-size:.9rem;color:var(--ink-soft);margin-top:2px}
+.svc-name .note{font-size:.85rem;color:var(--sage);margin-top:6px;font-style:italic}
+.price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:600;color:var(--clay-deep);
+  white-space:nowrap;
+}
+.price small{font-size:.95rem;font-weight:400}
+
+/* ---- contact / cta ---- */
+.contact{background:var(--bg-warm);border-top:1px solid var(--line)}
+.contact h2{margin-bottom:14px}
+.contact p{color:var(--ink-soft);max-width:480px;margin-bottom:32px}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 28px;border-radius:2px;
+  font-weight:500;font-size:1rem;text-decoration:none;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn-primary{background:var(--clay);color:#fff}
+.btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid var(--line)}
+footer p{font-size:.85rem;color:var(--ink-soft)}
+footer .name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink)}
+
+@media(max-width:680px){
+  .cred-grid,.mlist{grid-template-columns:1fr}
+  .svc{flex-direction:column;gap:6px}
+  .hero{padding:56px 0 44px}
+  section{padding:48px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Позитивна психотерапія · Супервізія</p>
+    <h1>Олена Максим'як<span class="role">психологиня</span></h1>
+    <p class="lead">Безпечний простір, де можна розібратися з тривогою, стосунками й внутрішніми конфліктами — у власному темпі та без поспіху.</p>
+    <div class="years"><b>9+</b><span>років практики</span></div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="s-label">Про підхід</p>
+    <h2>Кваліфікація та метод</h2>
+    <div class="cred-grid">
+      <div class="cred">
+        <h3>Позитивна психотерапія</h3>
+        <p>Кандидатка у психотерапевти в методі. Робота з ресурсами людини, а не лише з проблемами.</p>
+      </div>
+      <div class="cred">
+        <h3>Супервізія</h3>
+        <p>Супервізорка в полімодальному багатофокусному підході — підтримка для колег-психологів.</p>
+      </div>
+    </div>
+
+    <div class="memberships">
+      <p class="s-sub">Членство в професійних спільнотах</p>
+      <ul class="mlist">
+        <li>Українська Спілка Психотерапевтів</li>
+        <li>Українська Асоціація Позитивної Психотерапії</li>
+        <li>World Association of Positive Psychotherapy</li>
+        <li>Національна Психологічна Асоціація</li>
+        <li>Міжнародна Спілка Супервізорів</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="s-label">Послуги</p>
+    <h2>Формати роботи та вартість</h2>
+
+    <div class="svc">
+      <div class="svc-name">
+        <h3>Індивідуальна сесія</h3>
+        <p class="dur">Тривалість — 55 хв</p>
+      </div>
+      <div class="price">2 000 <small>грн</small></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-name">
+        <h3>Сімейна консультація</h3>
+        <p class="dur">Тривалість — 60 хв</p>
+      </div>
+      <div class="price">3 000 <small>грн</small></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-name">
+        <h3>Індивідуальна супервізія</h3>
+        <p class="dur">Тривалість — 60–75 хв</p>
+      </div>
+      <div class="price">2 500 <small>грн</small></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-name">
+        <h3>Групова супервізія</h3>
+        <p class="dur">Тривалість — 3 години</p>
+        <p class="note">Відкритий набір з вересня 2026 року</p>
+      </div>
+      <div class="price">1 500 <small>грн / зустріч</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="s-label">Запис</p>
+    <h2>Запишіться на консультацію</h2>
+    <p>Напишіть або зателефонуйте, щоб обрати зручний час. Перший крок завжди найважчий — і ви вже його робите.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="tel:+380963038640">Зателефонувати</a>
+      <a class="btn btn-ghost" href="viber://chat?number=%2B380963038640">Написати у Viber</a>
+      <a class="btn btn-ghost" href="https://t.me/+380963038640">Telegram</a>
+    </div>
+    <p style="margin-top:28px;font-size:1.05rem;color:var(--ink)">+380&nbsp;96&nbsp;303&nbsp;86&nbsp;40</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Олена Максим'як</p>
+    <p>Психологиня · Позитивна психотерапія · Супервізія</p>
+  </div>
+</footer>
+
+</body>
+</html>
