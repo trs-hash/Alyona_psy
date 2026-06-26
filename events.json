@@ -1,0 +1,24 @@
+[
+  {
+    "id": "group_supervision_2026",
+    "active": true,
+    "name": "Групова супервізія",
+    "meta": "Вересень 2026 — червень 2027 · раз на місяць · 3 години",
+    "link": "https://docs.google.com/forms/d/1B_rjUWFZkG2q8kW4T7-vLFjuO873krMOQobRen9TppU/viewform",
+    "btn": "Реєстрація"
+  },
+  {
+    "id": "individual_supervision",
+    "active": true,
+    "name": "Індивідуальна супервізія",
+    "meta": "Гнучкий графік · онлайн / офлайн",
+    "status": "Вільні місця"
+  },
+  {
+    "id": "military_supervision",
+    "active": true,
+    "name": "Супервізія для військових психологів",
+    "meta": "Фокус на травмі та бойовому стресі",
+    "status": "За запитом"
+  }
+]
