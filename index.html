@@ -151,11 +151,19 @@ h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.8rem
 .btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px)}
 .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
-.phone-line{margin-top:26px;font-size:1.05rem;color:var(--ink)}
 
 footer{padding:42px 0;text-align:center;border-top:1px solid var(--line)}
 footer .name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink)}
 footer p{font-size:.85rem;color:var(--ink-soft)}
+footer .footer-social{margin-top:14px;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+footer .footer-social a{font-size:.85rem;color:var(--clay);text-decoration:none;font-weight:500}
+footer .footer-social a:hover{text-decoration:underline}
+footer .footer-social span{color:var(--line)}
+
+.social-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.social-link{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-size:1rem;font-weight:400;padding:11px 18px;background:var(--card);border:1px solid var(--line);border-radius:2px;transition:border-color .15s,color .15s}
+.social-link:hover{border-color:var(--clay);color:var(--clay)}
+.social-link svg{width:20px;height:20px;flex:0 0 auto}
 
 @media(max-width:680px){.hero{padding:60px 0 48px}section{padding:50px 0}.season .panel{padding:30px 24px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -206,25 +214,12 @@ footer p{font-size:.85rem;color:var(--ink-soft)}
       <span class="tag">Супервізійний сезон 2026 / 2027</span>
       <h2>Відкритий набір на супервізію</h2>
       <p>Запрошую психологів, психотерапевтів, соціальних і військових психологів приєднатися до супервізійних груп нового сезону. Кількість місць обмежена.</p>
-      <ul class="open-items">
-        <li>
-          <div><div class="o-name">Групова супервізія</div><div class="o-meta">Вересень 2026 — червень 2027 · раз на місяць · 3 години</div></div>
-          <a class="o-reg" href="https://docs.google.com/forms/d/1B_rjUWFZkG2q8kW4T7-vLFjuO873krMOQobRen9TppU/viewform" target="_blank" rel="noopener">Реєстрація</a>
-        </li>
-        <li>
-          <div><div class="o-name">Індивідуальна супервізія</div><div class="o-meta">Гнучкий графік · онлайн / офлайн</div></div>
-          <span class="o-status">Вільні місця</span>
-        </li>
-        <li>
-          <div><div class="o-name">Супервізія для військових психологів</div><div class="o-meta">Фокус на травмі та бойовому стресі</div></div>
-          <span class="o-status">За запитом</span>
-        </li>
+      <ul class="open-items" id="events-list">
+        <li style="opacity:.5;font-size:.95rem;color:rgba(244,240,234,.7);padding:14px 0">Завантаження подій…</li>
       </ul>
-      <p style="font-size:.95rem">Щоб дізнатися деталі та записатися — напишіть або зателефонуйте:</p>
+      <p style="font-size:.95rem">Щоб дізнатися деталі та записатися — напишіть у бот:</p>
       <div class="s-contacts">
-        <a class="s-btn" href="tel:+380963038640">+380 96 303 86 40</a>
-        <a class="s-btn ghost" href="viber://chat?number=%2B380963038640">Viber</a>
-        <a class="s-btn ghost" href="https://t.me/+380963038640">Telegram</a>
+        <a class="s-btn" href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">✈ Написати в Telegram-бот</a>
       </div>
     </div>
   </div>
@@ -250,7 +245,7 @@ footer p{font-size:.85rem;color:var(--ink-soft)}
 <section id="about">
   <div class="wrap">
     <p class="s-label">Кваліфікація</p>
-    <h2>Хто я як спеціалістка</h2>
+    <h2>Хто я як фахівчиня</h2>
     <div class="cred-grid">
       <div class="cred">
         <h3>Психологиня · психотерапевтка</h3>
@@ -274,7 +269,7 @@ footer p{font-size:.85rem;color:var(--ink-soft)}
         <li>World Association of Positive Psychotherapy</li>
         <li>Національна Психологічна Асоціація</li>
         <li>Міжнародна Спілка Супервізорів</li>
-        <li>ГО «Соціальний проєкт Разом»</li>
+        <li>Амбасадорка ГО «Соціальний проєкт Разом»</li>
       </ul>
     </div>
   </div>
@@ -340,13 +335,20 @@ footer p{font-size:.85rem;color:var(--ink-soft)}
   <div class="wrap">
     <p class="s-label">Запис</p>
     <h2>Запишіться на консультацію</h2>
-    <p>Напишіть або зателефонуйте, щоб обрати зручний час. Перший крок завжди найважчий — і ви вже його робите.</p>
+    <p>Напишіть у бот — він допоможе залишити заявку. Перший крок завжди найважчий — і ви вже його робите.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="tel:+380963038640">Зателефонувати</a>
-      <a class="btn btn-ghost" href="viber://chat?number=%2B380963038640">Написати у Viber</a>
-      <a class="btn btn-ghost" href="https://t.me/+380963038640">Telegram</a>
+      <a class="btn btn-primary" href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">✈ Записатися через Telegram</a>
     </div>
-    <p class="phone-line">+380&nbsp;96&nbsp;303&nbsp;86&nbsp;40</p>
+    <div class="social-row">
+      <a class="social-link" href="https://www.instagram.com/olena.maksymiak" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @olena.maksymiak
+      </a>
+      <a class="social-link" href="https://www.facebook.com/olena.maksymiak" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+        @olena.maksymiak
+      </a>
+    </div>
   </div>
 </section>
 
@@ -354,8 +356,62 @@ footer p{font-size:.85rem;color:var(--ink-soft)}
   <div class="wrap">
     <p class="name">Олена Максим'як</p>
     <p>Психологиня · Психотерапевтка · Супервізорка · Позитивна психотерапія</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/olena.maksymiak" target="_blank" rel="noopener">Instagram</a>
+      <span>·</span>
+      <a href="https://www.facebook.com/olena.maksymiak" target="_blank" rel="noopener">Facebook</a>
+      <span>·</span>
+      <a href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">Telegram-бот</a>
+    </div>
   </div>
 </footer>
 
+<script>
+// Динамічні події — завантажуються з events.json (керується Telegram-ботом)
+(async function(){
+  const list = document.getElementById('events-list');
+  const BOT = 'https://t.me/Maksymiak_bot';
+  try {
+    const r = await fetch('events.json?v=' + Date.now());
+    if (!r.ok) throw new Error('no file');
+    const events = await r.json();
+    const active = events.filter(e => e.active !== false);
+    if (!active.length) {
+      list.innerHTML = '<li style="opacity:.6;font-size:.95rem;color:rgba(244,240,234,.8);padding:14px 0">Наразі активних наборів немає. Слідкуйте за оновленнями.</li>';
+      return;
+    }
+    list.innerHTML = active.map(e => {
+      const action = e.link
+        ? `<a class="o-reg" href="${e.link}" target="_blank" rel="noopener">${e.btn || 'Реєстрація'}</a>`
+        : e.status
+          ? `<span class="o-status">${e.status}</span>`
+          : `<a class="o-reg" href="${BOT}" target="_blank" rel="noopener">Записатися</a>`;
+      return `<li>
+        <div>
+          <div class="o-name">${e.name}</div>
+          <div class="o-meta">${e.meta || ''}</div>
+          ${e.note ? `<div class="o-note">${e.note}</div>` : ''}
+        </div>
+        ${action}
+      </li>`;
+    }).join('');
+  } catch {
+    // fallback — статичний список якщо events.json ще не розгорнуто
+    list.innerHTML = `
+      <li>
+        <div><div class="o-name">Групова супервізія</div><div class="o-meta">Вересень 2026 — червень 2027 · раз на місяць · 3 години</div></div>
+        <a class="o-reg" href="https://docs.google.com/forms/d/1B_rjUWFZkG2q8kW4T7-vLFjuO873krMOQobRen9TppU/viewform" target="_blank" rel="noopener">Реєстрація</a>
+      </li>
+      <li>
+        <div><div class="o-name">Індивідуальна супервізія</div><div class="o-meta">Гнучкий графік · онлайн / офлайн</div></div>
+        <span class="o-status">Вільні місця</span>
+      </li>
+      <li>
+        <div><div class="o-name">Супервізія для військових психологів</div><div class="o-meta">Фокус на травмі та бойовому стресі</div></div>
+        <span class="o-status">За запитом</span>
+      </li>`;
+  }
+})();
+</script>
 </body>
 </html>
