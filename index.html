@@ -4,266 +4,278 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Олена Максим'як — психологиня, психотерапевтка, супервізорка</title>
-<meta name="description" content="Олена Максим'як — психологиня, психотерапевтка та супервізорка. Метод Позитивної психотерапії. Понад 9 років практики. Індивідуальні, сімейні консультації, супервізія для психологів, соціальних працівників і військових психологів.">
-
+<meta name="description" content="Олена Максим'як — психологиня, психотерапевтка та супервізорка. Метод Позитивної психотерапії. Понад 9 років практики. Консультації та супервізія для психологів, соціальних працівників і військових психологів.">
 <meta property="og:title" content="Олена Максим'як — психологиня, психотерапевтка, супервізорка">
-<meta property="og:description" content="Метод Позитивної психотерапії. Понад 9 років практики. Запис на консультацію та супервізію.">
+<meta property="og:description" content="Метод Позитивної психотерапії. Понад 9 років практики. Консультації та супервізія.">
 <meta property="og:type" content="website">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fbf6ee;--bg-warm:#fdeedd;--bg-deep:#fbe3cf;
-  --ink:#33271f;--ink-soft:#6a5547;
-  --clay:#d9663a;--clay-deep:#bd4f2a;
-  --amber:#e7a13a;
-  --sage:#7fa06a;--sage-deep:#5f834c;
-  --line:#f0dcc6;--card:#fffdf9;
+  --paper:#f7f4ef;
+  --paper-2:#f1ece3;
+  --ink:#21251f;
+  --ink-2:#5c5f56;
+  --forest:#2d4a3e;
+  --forest-soft:#3c5e4f;
+  --clay:#c2704b;
+  --line:#e0d9cc;
+  --line-2:#d2c9b9;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
-.wrap{max-width:940px;margin:0 auto;padding:0 28px}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased;font-size:17px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.01em}
 
-.topbar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
-  background:var(--clay);color:#fff;text-decoration:none;
-  padding:10px 20px;font-size:.88rem;font-weight:300;text-align:center;
-  transition:background .15s}
-.topbar:hover{background:var(--clay-deep)}
-.topbar strong{font-weight:600}
-.topbar-dot{width:8px;height:8px;border-radius:50%;background:#fff;flex:0 0 auto;
-  animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.topbar-cta{font-weight:600;text-decoration:underline;white-space:nowrap}
-@media(max-width:560px){.topbar-cta{display:none}}
+/* announcement (top, in flow) */
+.ann{background:var(--forest);color:#eaf0ec}
+.ann a{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center;
+  color:#eaf0ec;text-decoration:none;padding:11px 20px;font-size:.85rem;letter-spacing:.01em;transition:background .2s}
+.ann a:hover{background:var(--forest-soft)}
+.ann .pip{width:6px;height:6px;border-radius:50%;background:#9ec5b0;flex:0 0 auto;animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.ann .arr{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:560px){.ann .arr{display:none}}
 
-nav{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:center;height:56px}
-nav .brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:.01em}
-nav .links{display:flex;gap:26px}
-nav .links a{text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:400;transition:color .15s}
-nav .links a:hover{color:var(--clay)}
-nav .cta{text-decoration:none;background:var(--clay);color:#fff;padding:9px 18px;border-radius:2px;font-size:.88rem;font-weight:500;transition:background .15s}
-nav .cta:hover{background:var(--clay-deep)}
-@media(max-width:760px){nav .links{display:none}}
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:rgba(247,244,239,.85);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+nav.scrolled{border-color:var(--line);background:rgba(247,244,239,.95)}
+nav .mark{font-family:'Fraunces',serif;font-size:1.15rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+nav .mark span{color:var(--forest)}
+nav .links{display:flex;gap:32px}
+nav .links a{text-decoration:none;color:var(--ink-2);font-size:.9rem;transition:color .2s}
+nav .links a:hover{color:var(--forest)}
+nav .n-cta{text-decoration:none;font-size:.9rem;color:var(--forest);border-bottom:1px solid var(--forest);padding-bottom:2px;transition:opacity .2s}
+nav .n-cta:hover{opacity:.6}
+@media(max-width:820px){nav .links{display:none}}
 
-.hero{position:relative;padding:80px 0 70px;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-220px;left:-200px;width:520px;height:520px;background:radial-gradient(circle,var(--bg-warm) 0%,transparent 68%);z-index:0}
-.hero .wrap{position:relative;z-index:1}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero-photo{position:relative}
-.hero-photo img{width:100%;display:block;border-radius:6px;object-fit:cover;aspect-ratio:4/5;
-  box-shadow:0 18px 50px -18px rgba(189,79,42,.45)}
-.hero-photo::after{content:"";position:absolute;inset:0;border-radius:6px;
-  border:1px solid rgba(255,255,255,.5);pointer-events:none}
-.hero-photo::before{content:"";position:absolute;right:-16px;bottom:-16px;width:120px;height:120px;
-  background:var(--amber);opacity:.18;border-radius:6px;z-index:-1}
-@media(max-width:760px){
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-photo{max-width:320px;order:-1}
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* hero */
+.hero{padding:150px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero .eyebrow{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);margin-bottom:28px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.4rem);line-height:.98;letter-spacing:-.025em;color:var(--ink)}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--forest)}
+.hero .roles{margin-top:24px;font-size:1.02rem;color:var(--ink-2);letter-spacing:.01em}
+.hero .roles b{color:var(--ink);font-weight:400}
+.hero .lead{margin-top:28px;max-width:480px;font-size:1.08rem;color:var(--ink-2)}
+.hero-cta{margin-top:38px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:.98rem;font-weight:400;
+  background:var(--forest);color:#f2f6f3;padding:15px 30px;border-radius:100px;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s}
+.btn:hover{background:var(--forest-soft);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+.btn.ghost:hover{border-color:var(--forest);color:var(--forest);background:transparent}
+.hero .stat{font-size:.92rem;color:var(--ink-2)}
+.hero .stat b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--forest);font-weight:400;margin-right:6px}
+
+.portrait{position:relative}
+.portrait img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;border-radius:3px;filter:saturate(.96)}
+.portrait .frameline{position:absolute;inset:14px 14px -14px -14px;border:1px solid var(--line-2);border-radius:3px;z-index:-1}
+@media(max-width:820px){
+  .hero{padding:128px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .portrait{max-width:360px;order:-1}
+  .portrait .frameline{inset:10px 10px -10px -10px}
 }
-.eyebrow{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:24px}
-h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.7rem,7.5vw,4.6rem);line-height:1.04;letter-spacing:-.01em;color:var(--ink)}
-h1 .roles{display:block;font-style:italic;font-size:.42em;color:var(--sage-deep);margin-top:.4em;font-weight:400;line-height:1.3}
-.lead{margin-top:28px;max-width:560px;font-size:1.12rem;color:var(--ink-soft)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:36px}
-.years{display:inline-flex;align-items:baseline;gap:.5em;padding:13px 20px;background:var(--card);border:1px solid var(--line);border-radius:2px}
-.years b{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--clay-deep);line-height:1}
-.years span{font-size:.9rem;color:var(--ink-soft)}
 
-section{padding:66px 0;border-top:1px solid var(--line)}
-.s-label{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--sage-deep);font-weight:500;margin-bottom:28px}
-h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.12;margin-bottom:10px}
-.section-intro{max-width:620px;color:var(--ink-soft);font-size:1.05rem;margin-bottom:8px}
+/* section frame */
+.sec{padding:88px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;gap:18px;align-items:baseline;margin-bottom:48px}
+.sec-num{font-family:'Fraunces',serif;font-size:.95rem;color:var(--clay);font-weight:500;font-variant-numeric:tabular-nums}
+.sec-eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.sec h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.02em;max-width:16ch}
+.sec h2 em{font-style:italic;color:var(--forest)}
 
-.method{background:var(--bg-warm)}
-.method-badges{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}
-.badge{font-size:.8rem;font-weight:600;color:var(--clay-deep);background:#fff;border:1px solid var(--bg-deep);padding:7px 14px;border-radius:100px}
-.method-body{max-width:680px;font-size:1.08rem;color:var(--ink-soft)}
-.method-body p{margin-bottom:16px}
-.method-body strong{color:var(--ink);font-weight:500}
+/* method */
+.method-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.method-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.method-tags span{font-size:.78rem;color:var(--forest);border:1px solid var(--line-2);padding:6px 13px;border-radius:100px}
+.method-text p{margin-bottom:18px;color:var(--ink-2);font-size:1.05rem}
+.method-text strong{color:var(--ink);font-weight:500}
+.method-aside{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;line-height:1.35;color:var(--forest);font-weight:300}
+.method-aside .sm{display:block;font-family:'Inter';font-style:normal;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:22px;font-weight:400}
+@media(max-width:820px){.method-wrap{grid-template-columns:1fr;gap:36px}}
 
-.cred-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:8px}
-.cred{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:26px 22px}
-.cred h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:500;color:var(--clay-deep);margin-bottom:8px}
-.cred p{font-size:.96rem;color:var(--ink-soft)}
-@media(max-width:760px){.cred-grid{grid-template-columns:1fr}}
+/* about */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.about-cell{background:var(--paper);padding:32px 28px}
+.about-cell h3{font-size:1.3rem;color:var(--forest);margin-bottom:10px;font-weight:400}
+.about-cell p{font-size:.96rem;color:var(--ink-2)}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.members{margin-top:44px}
+.members-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.members ul{list-style:none;border-top:1px solid var(--line)}
+.members li{padding:16px 0;border-bottom:1px solid var(--line);font-size:1.02rem;display:flex;gap:16px;align-items:baseline}
+.members li::before{content:counter(m,decimal-leading-zero);counter-increment:m;font-family:'Fraunces';font-size:.8rem;color:var(--clay);flex:0 0 auto}
+.members ul{counter-reset:m}
 
-.memberships{margin-top:38px}
-.memberships .s-sub{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:18px;font-weight:500}
-.mlist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
-.mlist li{font-size:.98rem;color:var(--ink);padding-left:22px;position:relative}
-.mlist li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border:1px solid var(--clay);border-radius:50%}
-@media(max-width:600px){.mlist{grid-template-columns:1fr}}
+/* supervision audience */
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.aud-cell{background:var(--paper);padding:30px 28px;display:flex;gap:18px;align-items:flex-start}
+.aud-cell .idx{font-family:'Fraunces';font-style:italic;font-size:1.4rem;color:var(--clay);flex:0 0 auto;line-height:1}
+.aud-cell h3{font-size:1.1rem;color:var(--ink);font-weight:400;margin-bottom:4px;font-family:'Inter';font-weight:500}
+.aud-cell p{font-size:.92rem;color:var(--ink-2)}
+@media(max-width:560px){.aud-grid{grid-template-columns:1fr}}
 
-.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-.aud{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:2px;padding:20px 22px}
-.aud .dot{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--bg-deep);display:flex;align-items:center;justify-content:center;color:var(--sage-deep);font-weight:600;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
-.aud h3{font-size:1.02rem;font-weight:600;color:var(--ink);margin-bottom:2px}
-.aud p{font-size:.9rem;color:var(--ink-soft)}
-@media(max-width:600px){.aud-grid{grid-template-columns:1fr}}
+/* services */
+.svc-list{border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);transition:padding-left .3s}
+.svc:hover{padding-left:10px}
+.svc .nm{font-family:'Fraunces';font-size:1.5rem;color:var(--ink);font-weight:400}
+.svc .meta{font-size:.9rem;color:var(--ink-2);margin-top:4px}
+.svc .note{font-size:.82rem;color:var(--clay);font-style:italic;margin-top:6px;font-family:'Fraunces'}
+.svc .pr{font-family:'Fraunces';font-size:1.6rem;color:var(--forest);font-weight:400;white-space:nowrap}
+.svc .pr small{font-size:.9rem;color:var(--ink-2)}
+@media(max-width:560px){.svc{grid-template-columns:1fr}.svc .pr{margin-top:8px}}
 
-.svc{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
-.svc:last-child{border-bottom:none}
-.svc-name{flex:1}
-.svc-name h3{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:500}
-.svc-name .dur{font-size:.9rem;color:var(--ink-soft);margin-top:2px}
-.svc-name .note{font-size:.85rem;color:var(--sage-deep);margin-top:6px;font-style:italic}
-.price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--clay-deep);white-space:nowrap}
-.price small{font-size:.92rem;font-weight:400}
-@media(max-width:600px){.svc{flex-direction:column;gap:6px}}
+/* diplomas */
+.dip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dip{aspect-ratio:3/4;background:var(--paper-2);border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;color:var(--ink-2);position:relative;transition:background .3s}
+.dip:hover{background:#ece5d9}
+.dip svg{width:30px;height:30px;opacity:.4;stroke:var(--forest)}
+.dip span{font-size:.82rem;line-height:1.35}
+.dip-note{margin-top:22px;font-size:.92rem;color:var(--ink-2);font-style:italic;font-family:'Fraunces'}
+@media(max-width:680px){.dip-grid{grid-template-columns:1fr 1fr}}
 
-.diplomas{background:var(--bg-warm)}
-.dip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
-.dip{aspect-ratio:3/4;background:var(--card);border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--ink-soft);text-align:center;padding:18px;position:relative;overflow:hidden}
-.dip::after{content:"";position:absolute;inset:8px;border:1px dashed var(--line);border-radius:2px;pointer-events:none}
-.dip svg{width:34px;height:34px;opacity:.45}
-.dip span{font-size:.82rem;line-height:1.3}
-.dip-note{margin-top:20px;font-size:.9rem;color:var(--ink-soft);font-style:italic}
-@media(max-width:760px){.dip-grid{grid-template-columns:1fr 1fr}}
+/* season */
+.season-panel{background:var(--forest);color:#e8efe9;border-radius:6px;padding:56px 48px}
+.season-panel .tag{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#9ec5b0;margin-bottom:20px}
+.season-panel h2{color:#f3f7f4;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:18px;max-width:18ch}
+.season-panel .intro{color:rgba(232,239,233,.82);max-width:540px;margin-bottom:8px}
+.season-list{list-style:none;margin:30px 0 32px}
+.season-list li{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:20px 0;border-top:1px solid rgba(158,197,176,.28)}
+.season-list li:last-child{border-bottom:1px solid rgba(158,197,176,.28)}
+.season-list .o-nm{font-family:'Fraunces';font-size:1.25rem;color:#f3f7f4;font-weight:400}
+.season-list .o-mt{font-size:.86rem;color:rgba(232,239,233,.7);margin-top:3px}
+.o-reg{font-size:.9rem;color:var(--forest);background:#eaf0ec;padding:10px 22px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:transform .25s,background .25s}
+.o-reg:hover{background:#fff;transform:translateY(-2px)}
+.o-status{font-size:.84rem;color:#cfe0d6;border:1px solid rgba(158,197,176,.4);padding:8px 16px;border-radius:100px;white-space:nowrap}
+.season-contact{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:4px}
+.season-contact .txt{font-size:.92rem;color:rgba(232,239,233,.82)}
+.season-contact a{color:#f3f7f4;text-decoration:underline;text-underline-offset:3px;font-size:.95rem}
+@media(max-width:560px){.season-panel{padding:36px 26px}.season-list li{grid-template-columns:1fr}.o-reg,.o-status{justify-self:start}}
 
-.season .panel{background:linear-gradient(135deg,var(--sage-deep),var(--sage));color:#f4f0ea;border-radius:4px;padding:42px 36px;margin-top:8px}
-.season .panel .tag{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;background:rgba(255,255,255,.16);padding:6px 12px;border-radius:100px;margin-bottom:18px;font-weight:500}
-.season h2{color:#fff;margin-bottom:14px}
-.season .panel p{color:rgba(244,240,234,.92);max-width:560px;margin-bottom:14px}
-.season .open-items{list-style:none;margin:22px 0 28px;display:grid;gap:12px}
-.season .open-items li{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18)}
-.season .open-items li:last-child{border-bottom:none}
-.season .open-items .o-name{font-size:1.05rem;font-weight:500;color:#fff}
-.season .open-items .o-meta{font-size:.85rem;color:rgba(244,240,234,.8)}
-.season .open-items .o-status{font-size:.82rem;font-weight:500;color:#fff;white-space:nowrap;background:rgba(255,255,255,.16);padding:5px 11px;border-radius:100px}
-.season .open-items .o-reg{font-size:.85rem;font-weight:600;color:var(--sage-deep);white-space:nowrap;background:#f4f0ea;padding:9px 18px;border-radius:2px;text-decoration:none;transition:transform .15s,box-shadow .15s}
-.season .open-items .o-reg:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.season .s-contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.season .s-btn{text-decoration:none;font-weight:500;font-size:.95rem;padding:13px 22px;border-radius:2px;background:#f4f0ea;color:var(--sage-deep);transition:transform .15s}
-.season .s-btn:hover{transform:translateY(-2px)}
-.season .s-btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+.contact h2{font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.02;letter-spacing:-.02em}
+.contact h2 em{font-style:italic;color:var(--forest)}
+.contact .lead{margin-top:22px;color:var(--ink-2);max-width:42ch}
+.contact-actions{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.contact-actions .btn{align-self:stretch;justify-content:center}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink-2);font-size:.92rem;padding:10px 16px;border:1px solid var(--line-2);border-radius:100px;transition:border-color .2s,color .2s}
+.socials a:hover{border-color:var(--forest);color:var(--forest)}
+.socials svg{width:17px;height:17px}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:32px}}
 
-.contact{background:var(--bg-deep)}
-.contact h2{margin-bottom:14px}
-.contact p{color:var(--ink-soft);max-width:480px;margin-bottom:30px}
-.btn-row{display:flex;flex-wrap:wrap;gap:14px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:2px;font-weight:500;font-size:1rem;text-decoration:none;transition:transform .15s,background .15s}
-.btn-primary{background:var(--clay);color:#fff}
-.btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.btn-ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
-
-footer{padding:42px 0;text-align:center;border-top:1px solid var(--line)}
-footer .name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink)}
-footer p{font-size:.85rem;color:var(--ink-soft)}
-footer .footer-social{margin-top:14px;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
-footer .footer-social a{font-size:.85rem;color:var(--clay);text-decoration:none;font-weight:500}
-footer .footer-social a:hover{text-decoration:underline}
-footer .footer-social span{color:var(--line)}
-
-.social-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
-.social-link{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-size:1rem;font-weight:400;padding:11px 18px;background:var(--card);border:1px solid var(--line);border-radius:2px;transition:border-color .15s,color .15s}
-.social-link:hover{border-color:var(--clay);color:var(--clay)}
-.social-link svg{width:20px;height:20px;flex:0 0 auto}
-
-@media(max-width:680px){.hero{padding:60px 0 48px}section{padding:50px 0}.season .panel{padding:30px 24px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* footer */
+footer{border-top:1px solid var(--line);padding:54px 0 60px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+footer .mark{font-family:'Fraunces';font-size:1.5rem;color:var(--ink)}
+footer .tagline{font-size:.9rem;color:var(--ink-2);margin-top:6px}
+footer .f-soc{display:flex;gap:20px}
+footer .f-soc a{color:var(--ink-2);text-decoration:none;font-size:.9rem;transition:color .2s}
+footer .f-soc a:hover{color:var(--forest)}
 </style>
 </head>
 <body>
 
-<a class="topbar" href="#season">
-  <span class="topbar-dot"></span>
-  <span><strong>Відкрито набір</strong> на групову супервізію · сезон вересень 2026 — червень 2027</span>
-  <span class="topbar-cta">Реєстрація →</span>
-</a>
+<div class="ann" id="top">
+  <a href="#season">
+    <span class="pip"></span>
+    <span>Відкрито набір на групову супервізію — сезон 2026/2027</span>
+    <span class="arr">Деталі →</span>
+  </a>
+</div>
 
-<nav>
+<nav id="nav">
   <div class="wrap">
+    <a class="mark" href="#top">Олена Максим'як<span>.</span></a>
     <div class="links">
       <a href="#method">Метод</a>
-      <a href="#about">Кваліфікація</a>
+      <a href="#about">Про мене</a>
       <a href="#services">Послуги</a>
-      <a href="#diplomas">Сертифікати</a>
-      <a href="#season">Набір на супервізію</a>
-      <a href="#contact">Контакти</a>
+      <a href="#season">Супервізія</a>
     </div>
+    <a class="n-cta" href="#contact">Написати</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap hero-grid">
-    <div class="hero-text">
+    <div class="hero-text reveal">
       <p class="eyebrow">Позитивна психотерапія · Супервізія</p>
-      <h1>Олена Максим'як<span class="roles">психологиня · психотерапевтка · супервізорка</span></h1>
-      <p class="lead">Безпечний простір, де можна розібратися з тривогою, стосунками й внутрішніми конфліктами — у власному темпі та без поспіху. А також професійна супервізія для тих, хто сам допомагає людям.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Записатися на консультацію</a>
-        <div class="years"><b>9+</b><span>років практики</span></div>
+      <h1>Простір, де можна <em>видихнути</em></h1>
+      <p class="roles"><b>Олена Максим'як</b> — психологиня, психотерапевтка, супервізорка</p>
+      <p class="lead">Разом розбираємо тривогу, стосунки та внутрішні конфлікти — у вашому темпі, без поспіху й оцінок. А ще — професійна супервізія для тих, хто сам допомагає людям.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Записатися на консультацію</a>
+        <span class="stat"><b>9+</b>років практики</span>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="olena.jpg" alt="Олена Максим'як — психологиня, психотерапевтка, супервізорка" loading="eager">
+    <div class="portrait reveal">
+      <img src="olena.jpg" alt="Олена Максим'як">
+      <div class="frameline"></div>
     </div>
   </div>
 </header>
 
-<section id="season" class="season">
+<section class="sec" id="method">
   <div class="wrap">
-    <p class="s-label">Актуальні набори</p>
-    <div class="panel">
-      <span class="tag">Супервізійний сезон 2026 / 2027</span>
-      <h2>Відкритий набір на супервізію</h2>
-      <p>Запрошую психологів, психотерапевтів, соціальних і військових психологів приєднатися до супервізійних груп нового сезону. Кількість місць обмежена.</p>
-      <ul class="open-items" id="events-list">
-        <li style="opacity:.5;font-size:.95rem;color:rgba(244,240,234,.7);padding:14px 0">Завантаження подій…</li>
-      </ul>
-      <p style="font-size:.95rem">Щоб дізнатися деталі та записатися — напишіть у бот:</p>
-      <div class="s-contacts">
-        <a class="s-btn" href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">✈ Написати в Telegram-бот</a>
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <span class="sec-eyebrow">Метод</span>
+    </div>
+    <div class="method-wrap">
+      <div class="method-text reveal">
+        <div class="method-tags">
+          <span>Офіційний метод</span>
+          <span>Доказовий підхід</span>
+          <span>Глибинна робота</span>
+        </div>
+        <p>Позитивна психотерапія — <strong>офіційно визнаний</strong> психотерапевтичний метод, ефективність якого підтверджена <strong>науковими дослідженнями</strong>.</p>
+        <p>«Позитивна» тут — не про «думати про хороше», а про <strong>цілісність</strong>: метод спирається на ресурси й сильні сторони людини, а не лише на симптоми. І водночас це <strong>глибинна</strong> робота — з причинами труднощів, життєвими сценаріями та внутрішніми конфліктами, а не тільки з наслідками.</p>
+        <p>Підходить для роботи з тривогою, стресом, вигоранням, кризами в стосунках, пошуком опори та сенсу — мʼяко, але по суті.</p>
+      </div>
+      <div class="method-aside reveal">
+        «Не там, де болить, а звідки болить».
+        <span class="sm">Принцип глибинної роботи</span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="method" class="method">
+<section class="sec" id="about">
   <div class="wrap">
-    <p class="s-label">Метод роботи</p>
-    <h2>Позитивна психотерапія</h2>
-    <div class="method-badges">
-      <span class="badge">Офіційний метод</span>
-      <span class="badge">Доказовий підхід</span>
-      <span class="badge">Глибинна робота</span>
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <span class="sec-eyebrow">Про мене</span>
     </div>
-    <div class="method-body">
-      <p>Позитивна психотерапія — це <strong>офіційно визнаний</strong> психотерапевтичний метод, ефективність якого підтверджена <strong>науковими дослідженнями</strong>.</p>
-      <p>«Позитивна» тут означає не «думати про хороше», а <strong>цілісну</strong> роботу: метод спирається на ресурси й сильні сторони людини, а не лише на симптоми та проблеми. Водночас це <strong>глибинний</strong> підхід — ми працюємо з причинами труднощів, життєвими сценаріями та внутрішніми конфліктами, а не лише з їхніми наслідками.</p>
-      <p>Такий формат підходить для роботи з тривогою, стресом, вигоранням, кризами в стосунках, пошуком опори та сенсу — мʼяко, але по суті.</p>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <p class="s-label">Кваліфікація</p>
-    <h2>Хто я як фахівчиня</h2>
-    <div class="cred-grid">
-      <div class="cred">
+    <h2 class="reveal" style="margin-bottom:44px">Хто я як <em>фахівчиня</em></h2>
+    <div class="about-grid reveal">
+      <div class="about-cell">
         <h3>Психологиня · психотерапевтка</h3>
         <p>Кандидатка у психотерапевти в методі Позитивна психотерапія. Понад 9 років практики.</p>
       </div>
-      <div class="cred">
+      <div class="about-cell">
         <h3>Супервізорка</h3>
-        <p>Супервізорка в полімодальному багатофокусному підході, понад 3 роки практики — підтримка для психологів, психотерапевтів, соціальних працівників і військових психологів.</p>
+        <p>Полімодальний багатофокусний підхід, понад 3 роки практики — підтримка для психологів, соціальних працівників і військових психологів.</p>
       </div>
-      <div class="cred">
+      <div class="about-cell">
         <h3>Лекторка</h3>
-        <p>Акредитована тренерка проєкту MH4U («Психічне здоров'я для України»). Читаю лекції для фахівців первинної ланки на теми психічного здоров'я.</p>
+        <p>Акредитована тренерка проєкту MH4U. Читаю лекції для фахівців первинної ланки на теми психічного здоров'я.</p>
       </div>
     </div>
-
-    <div class="memberships">
-      <p class="s-sub">Членство в професійних спільнотах</p>
-      <ul class="mlist">
+    <div class="members reveal">
+      <p class="members-label">Членство у професійних спільнотах</p>
+      <ul>
         <li>Українська Спілка Психотерапевтів</li>
         <li>Українська Асоціація Позитивної Психотерапії</li>
         <li>World Association of Positive Psychotherapy</li>
@@ -275,141 +287,162 @@ footer .footer-social span{color:var(--line)}
   </div>
 </section>
 
-<section id="supervision">
+<section class="sec" id="supervision">
   <div class="wrap">
-    <p class="s-label">Супервізія</p>
-    <h2>Для кого супервізія</h2>
-    <p class="section-intro">Простір професійної підтримки, розбору складних випадків і профілактики вигорання — для тих, хто щодня працює з людьми.</p>
-    <div class="aud-grid">
-      <div class="aud"><div class="dot">П</div><div><h3>Психологи та психотерапевти</h3><p>Розбір кейсів, робота зі складними клієнтами, професійне зростання.</p></div></div>
-      <div class="aud"><div class="dot">С</div><div><h3>Соціальні працівники</h3><p>Підтримка в роботі з вразливими групами та емоційно важкими ситуаціями.</p></div></div>
-      <div class="aud"><div class="dot">В</div><div><h3>Військові психологи</h3><p>Супервізія для фахівців, що працюють із травмою, бойовим стресом і ветеранами.</p></div></div>
-      <div class="aud"><div class="dot">Г</div><div><h3>Групи фахівців</h3><p>Групова супервізія з відкритим набором — обмін досвідом у колі колег.</p></div></div>
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <span class="sec-eyebrow">Супервізія</span>
+    </div>
+    <h2 class="reveal" style="margin-bottom:44px">Підтримка для тих, хто <em>підтримує інших</em></h2>
+    <div class="aud-grid reveal">
+      <div class="aud-cell"><span class="idx">i</span><div><h3>Психологи та психотерапевти</h3><p>Розбір кейсів, робота зі складними клієнтами, професійне зростання.</p></div></div>
+      <div class="aud-cell"><span class="idx">ii</span><div><h3>Соціальні працівники</h3><p>Підтримка в роботі з вразливими групами та емоційно важкими ситуаціями.</p></div></div>
+      <div class="aud-cell"><span class="idx">iii</span><div><h3>Військові психологи</h3><p>Супервізія для фахівців, що працюють із травмою та бойовим стресом.</p></div></div>
+      <div class="aud-cell"><span class="idx">iv</span><div><h3>Групи фахівців</h3><p>Групова супервізія з відкритим набором — обмін досвідом у колі колег.</p></div></div>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section class="sec" id="services">
   <div class="wrap">
-    <p class="s-label">Послуги</p>
-    <h2>Формати роботи та вартість</h2>
-    <div class="svc">
-      <div class="svc-name"><h3>Індивідуальна сесія</h3><p class="dur">Тривалість — 55 хв</p></div>
-      <div class="price">2 000 <small>грн</small></div>
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <span class="sec-eyebrow">Послуги та вартість</span>
     </div>
-    <div class="svc">
-      <div class="svc-name"><h3>Сімейна консультація</h3><p class="dur">Тривалість — 90 хв</p></div>
-      <div class="price">3 500 <small>грн</small></div>
-    </div>
-    <div class="svc">
-      <div class="svc-name"><h3>Індивідуальна супервізія</h3><p class="dur">Тривалість — 60–75 хв</p></div>
-      <div class="price">2 500 <small>грн</small></div>
-    </div>
-    <div class="svc">
-      <div class="svc-name"><h3>Групова супервізія</h3><p class="dur">Тривалість — 3 години</p><p class="note">Відкритий набір з вересня 2026 року</p></div>
-      <div class="price">1 500 <small>грн / зустріч</small></div>
+    <div class="svc-list reveal">
+      <div class="svc">
+        <div><div class="nm">Індивідуальна сесія</div><div class="meta">Тривалість — 55 хв</div></div>
+        <div class="pr">2 000 <small>грн</small></div>
+      </div>
+      <div class="svc">
+        <div><div class="nm">Сімейна консультація</div><div class="meta">Тривалість — 90 хв</div></div>
+        <div class="pr">3 500 <small>грн</small></div>
+      </div>
+      <div class="svc">
+        <div><div class="nm">Індивідуальна супервізія</div><div class="meta">Тривалість — 60–75 хв</div></div>
+        <div class="pr">2 500 <small>грн</small></div>
+      </div>
+      <div class="svc">
+        <div><div class="nm">Групова супервізія</div><div class="meta">Тривалість — 3 години</div><div class="note">Відкритий набір з вересня 2026</div></div>
+        <div class="pr">1 500 <small>грн / зустріч</small></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="diplomas" class="diplomas">
+<section class="sec" id="diplomas">
   <div class="wrap">
-    <p class="s-label">Підтвердження кваліфікації</p>
-    <h2>Дипломи та сертифікати</h2>
-    <p class="section-intro">Документи про освіту, сертифікацію в методі та підвищення кваліфікації.</p>
-    <div class="dip-grid">
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 7l9-4 9 4M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7"/></svg><span>Диплом про освіту</span></div>
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M9 14l-1 7 4-2 4 2-1-7"/></svg><span>Сертифікат у методі ППТ</span></div>
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 9h8M8 13h6"/></svg><span>Сертифікат супервізора</span></div>
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 7l9-4 9 4M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7"/></svg><span>Підвищення кваліфікації</span></div>
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M9 14l-1 7 4-2 4 2-1-7"/></svg><span>Міжнародний сертифікат</span></div>
-      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 9h8M8 13h6"/></svg><span>Членство в асоціаціях</span></div>
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <span class="sec-eyebrow">Дипломи та сертифікати</span>
     </div>
-    <p class="dip-note">Розділ наповнюється — додамо скани документів найближчим часом.</p>
+    <div class="dip-grid reveal">
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 7h18M3 7l9-4 9 4M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7"/></svg><span>Диплом про освіту</span></div>
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M9 14l-1 7 4-2 4 2-1-7"/></svg><span>Сертифікат у методі ППТ</span></div>
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 9h8M8 13h6"/></svg><span>Сертифікат супервізора</span></div>
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 7h18M3 7l9-4 9 4M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7"/></svg><span>Підвищення кваліфікації</span></div>
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M9 14l-1 7 4-2 4 2-1-7"/></svg><span>Міжнародний сертифікат</span></div>
+      <div class="dip"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 9h8M8 13h6"/></svg><span>Тренінг MH4U</span></div>
+    </div>
+    <p class="dip-note reveal">Розділ наповнюється — скани документів додамо найближчим часом.</p>
   </div>
 </section>
 
-
-
-<section id="contact" class="contact">
+<section class="sec" id="season">
   <div class="wrap">
-    <p class="s-label">Запис</p>
-    <h2>Запишіться на консультацію</h2>
-    <p>Напишіть у бот — він допоможе залишити заявку. Перший крок завжди найважчий — і ви вже його робите.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">✈ Записатися через Telegram</a>
+    <div class="sec-head reveal">
+      <span class="sec-num">06</span>
+      <span class="sec-eyebrow">Актуальний набір</span>
     </div>
-    <div class="social-row">
-      <a class="social-link" href="https://www.instagram.com/olena.maksymiak" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @olena.maksymiak
-      </a>
-      <a class="social-link" href="https://www.facebook.com/olena.maksymiak" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
-        @olena.maksymiak
-      </a>
+    <div class="season-panel reveal">
+      <span class="tag">Супервізійний сезон 2026 / 2027</span>
+      <h2>Відкритий набір на супервізію</h2>
+      <p class="intro">Запрошую психологів, психотерапевтів, соціальних і військових психологів до супервізійних груп нового сезону. Кількість місць обмежена.</p>
+      <ul class="season-list" id="events-list">
+        <li><div class="o-nm">Завантаження…</div></li>
+      </ul>
+      <div class="season-contact">
+        <span class="txt">Деталі та запис:</span>
+        <a href="https://t.me/olena.maksymiak" target="_blank" rel="noopener">Написати в Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2>Зробімо <em>перший крок</em> разом</h2>
+        <p class="lead">Напишіть Олені в Telegram — вона відповість і допоможе обрати зручний час. Перший крок завжди найважчий, і ви вже його робите.</p>
+      </div>
+      <div class="contact-actions reveal">
+        <a class="btn" href="https://t.me/olena.maksymiak" target="_blank" rel="noopener">Написати в Telegram</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/olena.maksymiak/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/olena.maksymiak" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <p class="name">Олена Максим'як</p>
-    <p>Психологиня · Психотерапевтка · Супервізорка · Позитивна психотерапія</p>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/olena.maksymiak" target="_blank" rel="noopener">Instagram</a>
-      <span>·</span>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="mark">Олена Максим'як</div>
+      <div class="tagline">Психологиня · Психотерапевтка · Супервізорка</div>
+    </div>
+    <div class="f-soc">
+      <a href="https://t.me/olena.maksymiak" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.instagram.com/olena.maksymiak/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/olena.maksymiak" target="_blank" rel="noopener">Facebook</a>
-      <span>·</span>
-      <a href="https://t.me/Maksymiak_bot" target="_blank" rel="noopener">Telegram-бот</a>
     </div>
   </div>
 </footer>
 
 <script>
-// Динамічні події — завантажуються з events.json (керується Telegram-ботом)
+// nav border on scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
+
+// reveal on scroll
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// dynamic events
 (async function(){
   const list = document.getElementById('events-list');
-  const BOT = 'https://t.me/Maksymiak_bot';
-  try {
-    const r = await fetch('events.json?v=' + Date.now());
-    if (!r.ok) throw new Error('no file');
-    const events = await r.json();
+  const TG = 'https://t.me/olena.maksymiak';
+  const render = (events) => {
     const active = events.filter(e => e.active !== false);
-    if (!active.length) {
-      list.innerHTML = '<li style="opacity:.6;font-size:.95rem;color:rgba(244,240,234,.8);padding:14px 0">Наразі активних наборів немає. Слідкуйте за оновленнями.</li>';
-      return;
-    }
+    if(!active.length){ list.innerHTML = '<li><div class="o-nm" style="opacity:.7">Наразі активних наборів немає. Слідкуйте за оновленнями.</div></li>'; return; }
     list.innerHTML = active.map(e => {
       const action = e.link
-        ? `<a class="o-reg" href="${e.link}" target="_blank" rel="noopener">${e.btn || 'Реєстрація'}</a>`
-        : e.status
-          ? `<span class="o-status">${e.status}</span>`
-          : `<a class="o-reg" href="${BOT}" target="_blank" rel="noopener">Записатися</a>`;
-      return `<li>
-        <div>
-          <div class="o-name">${e.name}</div>
-          <div class="o-meta">${e.meta || ''}</div>
-          ${e.note ? `<div class="o-note">${e.note}</div>` : ''}
-        </div>
-        ${action}
-      </li>`;
+        ? `<a class="o-reg" href="${e.link}" target="_blank" rel="noopener">${e.btn||'Реєстрація'}</a>`
+        : e.status ? `<span class="o-status">${e.status}</span>`
+        : `<a class="o-reg" href="${TG}" target="_blank" rel="noopener">Записатися</a>`;
+      return `<li><div><div class="o-nm">${e.name}</div><div class="o-mt">${e.meta||''}</div></div>${action}</li>`;
     }).join('');
-  } catch {
-    // fallback — статичний список якщо events.json ще не розгорнуто
-    list.innerHTML = `
-      <li>
-        <div><div class="o-name">Групова супервізія</div><div class="o-meta">Вересень 2026 — червень 2027 · раз на місяць · 3 години</div></div>
-        <a class="o-reg" href="https://docs.google.com/forms/d/1B_rjUWFZkG2q8kW4T7-vLFjuO873krMOQobRen9TppU/viewform" target="_blank" rel="noopener">Реєстрація</a>
-      </li>
-      <li>
-        <div><div class="o-name">Індивідуальна супервізія</div><div class="o-meta">Гнучкий графік · онлайн / офлайн</div></div>
-        <span class="o-status">Вільні місця</span>
-      </li>
-      <li>
-        <div><div class="o-name">Супервізія для військових психологів</div><div class="o-meta">Фокус на травмі та бойовому стресі</div></div>
-        <span class="o-status">За запитом</span>
-      </li>`;
+  };
+  try{
+    const r = await fetch('events.json?v=' + Date.now());
+    if(!r.ok) throw 0;
+    render(await r.json());
+  }catch{
+    render([
+      {active:true,name:'Групова супервізія',meta:'Вересень 2026 — червень 2027 · раз на місяць · 3 години',link:'https://docs.google.com/forms/d/1B_rjUWFZkG2q8kW4T7-vLFjuO873krMOQobRen9TppU/viewform',btn:'Реєстрація'},
+      {active:true,name:'Індивідуальна супервізія',meta:'Гнучкий графік · онлайн / офлайн',status:'Вільні місця'},
+      {active:true,name:'Супервізія для військових психологів',meta:'Фокус на травмі та бойовому стресі',status:'За запитом'}
+    ]);
   }
 })();
 </script>
